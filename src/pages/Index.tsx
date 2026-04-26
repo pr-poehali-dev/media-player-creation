@@ -230,8 +230,6 @@ export default function Index() {
           {/* PLAYER TAB */}
           {tab === "player" && (
             <div className="flex flex-col items-center gap-6 animate-scale-in">
-              <OrbitDisc isPlaying={isPlaying} cover={covers[trackIdx]} />
-
               <div className="text-center w-full">
                 <div className="flex items-center justify-center gap-2 mb-1">
                   <h2 className="font-display text-base font-semibold tracking-tight leading-tight">{track.title}</h2>
@@ -256,7 +254,7 @@ export default function Index() {
               {/* Progress */}
               <div className="w-full flex flex-col gap-2">
                 <div
-                  className="relative w-full h-1 bg-secondary rounded-full cursor-pointer group"
+                  className="relative w-full h-3 bg-secondary rounded-full cursor-pointer group"
                   onClick={(e) => {
                     const rect = e.currentTarget.getBoundingClientRect();
                     const ratio = (e.clientX - rect.left) / rect.width;

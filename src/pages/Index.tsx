@@ -130,6 +130,32 @@ export default function Index() {
 
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const bassRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+
+  const playChime = (type: "in" | "out") => {
+    const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
+    audioCtxRef.current = ctx;
+    const notes = type === "in" ? [523, 659, 784] : [784, 659, 523];
+    notes.forEach((freq, i) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = "sine";
+      osc.frequency.value = freq;
+      const t = ctx.currentTime + i * 0.12;
+      gain.gain.setValueAtTime(0, t);
+      gain.gain.linearRampToValueAtTime(0.18, t + 0.03);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.45);
+      osc.start(t);
+      osc.stop(t + 0.45);
+    });
+  };
+
+  useEffect(() => {
+    playChime("in");
+    return () => { playChime("out"); };
+  }, []);
 
   const track = TRACKS[trackIdx];
   const covers = ["🌌", "⚡", "🌫️", "🔮", "🖤", "📡"];

@@ -201,7 +201,7 @@ export default function Index() {
 
         {/* Header */}
         <div className="flex items-center justify-between px-1">
-          <h1 className="font-display text-lg font-bold shimmer-text tracking-tight">ОРБИТА</h1>
+          <h1 className="font-display text-lg font-bold shimmer-text tracking-tight">MONARCH</h1>
           <span className="font-mono text-xs text-muted-foreground">v1.0</span>
         </div>
 
@@ -543,7 +543,7 @@ export default function Index() {
         )}
 
         <p className="text-center text-[10px] font-mono text-muted-foreground opacity-40 pb-2">
-          ОРБИТА · {new Date().getFullYear()}
+          MONARCH PLAYER · {new Date().getFullYear()}
         </p>
       </div>
     </div>

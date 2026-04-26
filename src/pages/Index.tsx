@@ -230,6 +230,22 @@ export default function Index() {
           {/* PLAYER TAB */}
           {tab === "player" && (
             <div className="flex flex-col items-center gap-6 animate-scale-in">
+              {/* Cover */}
+              <div className="w-full aspect-square rounded-2xl overflow-hidden relative"
+                style={{ background: "radial-gradient(circle at 40% 35%, #1a0a2e, #0a0a1a)" }}>
+                <div className="absolute inset-0 flex items-center justify-center text-[120px]">
+                  {covers[trackIdx]}
+                </div>
+                <div className="absolute inset-0" style={{
+                  background: "radial-gradient(circle at 30% 25%, rgba(168,85,247,0.2), transparent 60%)",
+                }} />
+                {isPlaying && (
+                  <div className="absolute inset-0 animate-pulse" style={{
+                    background: "radial-gradient(circle at 50% 100%, rgba(168,85,247,0.15), transparent 60%)",
+                  }} />
+                )}
+              </div>
+
               <div className="text-center w-full">
                 <div className="flex items-center justify-center gap-2 mb-1">
                   <h2 className="font-display text-base font-semibold tracking-tight leading-tight">{track.title}</h2>

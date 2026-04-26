@@ -196,7 +196,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-start py-8 px-4 relative z-10">
+    <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 relative z-10" style={{ backgroundImage: "url('/0a497bb294685fd17f65f10ebef3ca39.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}>
       <div className="w-full max-w-sm mx-auto flex flex-col gap-4 animate-fade-in">
 
         {/* Header */}

@@ -222,7 +222,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 relative z-10" style={{ backgroundImage: "url('/0a497bb294685fd17f65f10ebef3ca39.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}>
+    <div className="min-h-screen flex flex-col items-center justify-start py-8 px-4 relative z-10" style={{ backgroundImage: "url('https://cdn.poehali.dev/projects/84706224-f4f6-4a5d-8f96-bc45482b525f/files/4a24e40a-e226-4735-aaf0-bd3cb946cc5a.jpg')", backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed" }}>
       <div className="w-full max-w-sm mx-auto flex flex-col gap-4 animate-fade-in">
 
         {/* Header */}

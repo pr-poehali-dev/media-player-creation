@@ -60,7 +60,7 @@ export function PlayerTab({
     <div className="flex flex-col items-center gap-6 animate-scale-in">
       {/* Cover */}
       <div className="w-full aspect-square rounded-2xl overflow-hidden relative"
-        style={{ background: "radial-gradient(circle at 40% 35%, #1a0a2e, #0a0a1a)" }}>
+        style={{ background: "radial-gradient(circle at 40% 35%, rgba(26,10,46,0.35), rgba(10,10,26,0.25))" }}>
         <div className="absolute inset-0 flex items-center justify-center text-[120px]">
           {covers[trackIdx]}
         </div>
